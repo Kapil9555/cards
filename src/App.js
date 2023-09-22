@@ -105,21 +105,21 @@ const handleSavePdf=()=>{
                       <Typography sx={{ fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
                         Name:
                       </Typography>
-                      <InputBase placeholder='Enter Name' name='name' value={data.name}  sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'}}} onChange={handleSetValue}/>
+                      <InputBase placeholder='Enter Name' name='name' value={data.name}  sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'},pt:"4px"}} onChange={handleSetValue}/>
                      </Box>
 
                      <Box sx={{display:"flex",alignItems:":center",height:'33.33%',  }}>
-                      <Typography sx={{ fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
+                      <Typography sx={{ fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
                       Post:
                       </Typography>
-                      <InputBase placeholder="Enter Post" name='post' value={data.post}   sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'}}}  onChange={handleSetValue}/>
+                      <InputBase placeholder="Enter Post" name='post' value={data.post}   sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'},pt:"3px"}}  onChange={handleSetValue}/>
                      </Box>
 
                      <Box sx={{display:"flex",alignItems:":center",height:'33.33%',  }}>
                       <Typography sx={{ whiteSpace:'nowrap',fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
                         District-State:
                       </Typography>
-                      <InputBase   placeholder="Enter District-State"  name='district' value={data.district}  sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'}}}  onChange={handleSetValue}/>
+                      <InputBase   placeholder="Enter District-State"  name='district' value={data.district}  sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'},pt:"3px"}}  onChange={handleSetValue}/>
                      </Box>
 
                    
@@ -127,7 +127,7 @@ const handleSavePdf=()=>{
                  
                  <Grid container sx={{mt:"3px"}}>
                    <Grid item xs={4.8} sx={{position:"relative",height:"fit-content"}}>
-                   <Box sx={{ml:"2.5px",height:{lg:"180px",md:"180px",sm:"180px",xs:"100px"},width:"75%",mt:{lg:"27px",md:"25px",sm:"25px",xs:"10px"}}}>
+                   <Box sx={{height:{lg:"180px",md:"180px",sm:"180px",xs:"100px"},width:"75%",mt:{lg:"27px",md:"25px",sm:"25px",xs:"10px"}}}>
                      <img alt='img' src={data.image} height={"100%"} width={"100%"}/>
                    </Box>
                    <Box sx={{ml:"3px",position:"absolute",top:{lg:"135px",md:"135px",sm:"135px",xs:"80px"},height:{lg:"110px",md:"110px",sm:"110px",xs:"50px"},width:"73%",mt:{lg:"25px",md:"25px",sm:"25px",xs:"9px"}}}>
