@@ -7,7 +7,7 @@ import sign from './assests/signimage.png';
 import './print-styles.css';
 
 function App() {
-   
+  const [screen,setScreen]=useState(true)
   const[data, setData]=useState({
     image:imgdata,
     name:"",
@@ -30,8 +30,18 @@ const handleSetValue=(e)=>{
 }
 
 const handleSavePdf=()=>{
+  setScreen(false)
 
-  window.print()
+  setTimeout(() => {
+   
+    window.print()
+  },400);
+
+  setTimeout(()=>{
+    setScreen(true)
+  },700)
+  
+ 
 }
 
 // console.log(data)
@@ -43,12 +53,12 @@ const handleSavePdf=()=>{
      <Grid container sx={{justifyContent:"center",alignItems:"center",height:"100vh"}}>
         <Grid  item xs={12} sm={11} md={10} lg={8} sx={{position:"relative",height:{xs:"270px",sm:"500px",md:"500px",lg:"500px"},}}> 
         <Box sx={{position:"absolute",height:"100%",width:"100%"}}>
-            <img src={cardbg} height={"100%"} width={"100%"}/>
+            <img src={cardbg} alt='card' height={"100%"} width={"100%"}/>
         </Box>
             
             <Grid container sx={{zIndex:9999}}>
               <Grid item xs={5}>
-                 <Box sx={{display:"flex",justifyContent:"space-around",alignItems:"center",height:{lg:"65px",md:"60px",sm:"50px",xs:"40px"}}}>
+                 <Box sx={{display:screen?"flex":"none",justifyContent:"space-around",alignItems:"center",height:{lg:"65px",md:"60px",sm:"50px",xs:"40px"}}}>
                  <Button
         sx={{
           color: 'white',
@@ -138,11 +148,13 @@ const handleSavePdf=()=>{
 
                    <Grid item xs={12} sx={{display:"flex",justifyContent:"center",mt:{xs:"18px",sm:"60px",md:"53px",lg:"45px"},zIndex:999999}}>
                       <Box sx={{width:"90%",display:"flex",justifyContent:"space-between",alignItems:"center"}}>
-                      <Box sx={{display:"flex"}}>
+                      <Box sx={{display:"flex",alignItems:"center"}}>
                          <Typography sx={{fontSize:{lg:"22px",md:"19px",sm:"16px",xs:"15px"},color:"black",fontWeight:"700"}}>
                              दिनांक -
                          </Typography>
-                         <InputBase placeholder='Enter Mobile' type='date' name='date' value={data.date}   onChange={handleSetValue}  sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'},pl:"3px"}} />
+                         <Box sx={{width:{xs:"80px",sm:"80px",md:"80px",lg:"120px"},ml:"3px"}}>
+                         <input placeholder='dd/mm/yy' name='date' value={data.date}   onChange={handleSetValue}  style={{width:"100%"}}/>
+                         </Box>
                       </Box>
                         <Box>
                            <Typography align='right' sx={{fontSize:{lg:"22px",md:"19px",sm:"16px",xs:"15px"},color:"black",whiteSpace:"nowrap",fontWeight:"700"}}>
