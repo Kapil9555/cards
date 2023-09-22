@@ -109,7 +109,7 @@ const handleSavePdf=()=>{
                      </Box>
 
                      <Box sx={{display:"flex",alignItems:":center",height:'33.33%',  }}>
-                      <Typography sx={{ fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
+                      <Typography sx={{ fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'14px'}, display:'flex', justifyContent:'center', alignItems:'center'}}>
                       Post:
                       </Typography>
                       <InputBase placeholder="Enter Post" name='post' value={data.post}   sx={{fontSize:{lg:'19px',md:'17px', sm:'15px', xs:'12px'},height:"100%",ml:'3px',width:{lg:"50%",md:"60%", sm:'70%', xs:'85%'},pt:"3px"}}  onChange={handleSetValue}/>
