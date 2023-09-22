@@ -35,7 +35,7 @@ const handleSavePdf=()=>{
   setTimeout(() => {
    
     window.print()
-  },600);
+  },300);
 
   setTimeout(()=>{
     setScreen(true)
