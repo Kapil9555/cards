@@ -30,18 +30,8 @@ const handleSetValue=(e)=>{
 }
 
 const handleSavePdf=()=>{
-  setScreen(false)
-
-  setTimeout(() => {
-   
     window.print()
-  },300);
-
-  setTimeout(()=>{
     setScreen(true)
-  },1000)
-  
- 
 }
 
 // console.log(data)
@@ -60,6 +50,7 @@ const handleSavePdf=()=>{
               <Grid item xs={5}>
                  <Box sx={{display:screen?"flex":"none",justifyContent:"space-around",alignItems:"center",height:{lg:"65px",md:"60px",sm:"50px",xs:"40px"}}}>
                  <Button
+                 className="print-only-button hide-on-print" 
         sx={{
           color: 'white',
           bgcolor: 'black',
@@ -88,7 +79,7 @@ const handleSavePdf=()=>{
       </Button>
     
                       
-                     <Button onClick={handleSavePdf} className="print-only-button" sx={{color:"white",bgcolor:"black","&:hover":{bgcolor:"black"},border:"1.5px solid gray",borderRadius:"20px",whiteSpace:"nowrap",fontSize:{xs:"7px",sm:"8px",md:"11px",lg:"12px"}}}>Print pdf</Button>
+                     <Button  className="print-only-button hide-on-print" onClick={handleSavePdf} sx={{color:"white",bgcolor:"black","&:hover":{bgcolor:"black"},border:"1.5px solid gray",borderRadius:"20px",whiteSpace:"nowrap",fontSize:{xs:"7px",sm:"8px",md:"11px",lg:"12px"}}}>Print pdf</Button>
                  </Box>
               </Grid>
 
